@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora de ICMS de Importação</title>
+  </head>
+  <body>
+    <h1>Calculadora de ICMS de Importação</h1>
+    <div class="container">
+      <div class="dados">
+        <label>Valor do Produto Declarado (US$)*:</label>
+        <input required type="number" id="cotacao" step="0.01" />
+
+        <label>Cotação do Dólar (R$):</label>
+        <input disabled type="number" id="valorDolar" step="0.01" />
+
+        <label>Alíquota do Imposto de Importação (%):</label>
+        <input disabled type="number" id="aliquotaII" step="1" value="60" />
+
+        <label>Alíquota de ICMS Do Estado (%)*:</label>
+        <input type="number" id="aliquotaICMS" step="1" value="20" />
+
+        <button onclick="calcular()">Calcular</button>
+      </div>
+      <div class="resultado" id="resultado">
+        <strong>Resultado em Reais:</strong><br />
+        Valor do Produto Declarado: R$ 00.00<br />
+        Imposto de Importação (60%): R$ 00.00<br />
+        Base de Cálculo do ICMS: R$ 00.00<br />
+        ICMS Devido do Estado: R$ 00.00<br />
+        Valor Total de Imposto a Pagar: <strong>R$ 00.00</strong>
+      </div>
+    </div>
+
+    <footer>
+      &copy; <span id="ano"></span> Calculadora de ICMS de Importação - Todos os
+      Direitos Reservados - Desenvolvido por
+      <a href="https://mazinhodev.com.br/">Mazinho Dev</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
